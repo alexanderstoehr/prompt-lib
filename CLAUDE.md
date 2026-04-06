@@ -11,6 +11,7 @@
 prompt-lib/
 ├── CLAUDE.md              ← Dieses File: Regeln fürs Repo
 ├── bootstrap.md           ← Starter-Anleitung für neue Projekte
+├── exploration/           ← Templates für die Explorations-/Discovery-Phase
 ├── doku-phase/            ← Templates für die Konzept-/Dokumentationsphase
 ├── code-phase/            ← Templates für die Implementierungsphase
 ├── testing/               ← Templates für Testing-Strategien

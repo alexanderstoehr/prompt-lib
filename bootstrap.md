@@ -163,9 +163,30 @@ Templates werden **kopiert und angepasst**, nicht verlinkt — jedes Projekt ist
 
 ---
 
+## Schritt 0 (optional): Explorations-Phase
+
+Wenn die Idee noch nicht klar ist, der Möglichkeitsraum noch offen oder das Problemfeld neu — **vor** der Doku-Phase eine Explorations-Phase einlegen.
+
+→ [`exploration/explorations-phase-anleitung.md`](./exploration/explorations-phase-anleitung.md)
+
+**Wann sinnvoll:**
+- Neues Problemfeld, wenig Vorwissen
+- Mehrere Richtungen möglich, noch keine klare Präferenz
+- Technische Machbarkeit unklar (APIs testen, Prototypen bauen)
+- "Ich weiss dass ich was bauen will, aber nicht genau was"
+
+**Wann überspringen:**
+- Klare Idee, klare Zielgruppe, klarer Scope
+- Erweiterung eines bestehenden Projekts
+- Kleine Projekte mit wenig Unbekanntem
+
+Die Explorations-Phase produziert ein **Erkenntnisse-Destillat** das direkt als Input für die Doku-Phase dient.
+
+---
+
 ## Erste Session starten
 
 Nach dem Bootstrap:
 1. Session-Log-Eintrag für Session 1 schreiben
-2. Mit der Doku-Phase beginnen (falls Konzeptphase) oder direkt coden (falls kleines Projekt)
-3. Doku-Phase-Anleitung als Leitfaden verwenden
+2. Mit der Explorations-Phase beginnen (falls Idee noch offen) oder direkt mit der Doku-Phase (falls Konzept klar)
+3. Jeweilige Phasen-Anleitung als Leitfaden verwenden
