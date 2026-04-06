@@ -1,0 +1,16 @@
+# Lokale Notizen (Entstehungskontext, nicht öffentlich)
+notes/
+
+# Claude Code lokale Config
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
