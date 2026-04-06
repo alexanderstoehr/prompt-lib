@@ -89,8 +89,8 @@ Die Explorations-Phase bewegt sich zwischen drei Ebenen. Sie sind nicht streng s
 ### Kern-Idee
 [Ein Satz der das Projekt beschreibt]
 
-### Leitprinzipien
-[1-3 gewählte Denkprinzipien die das Projekt prägen — mit Begründung warum diese]
+### Leitprinzipien (wenn gewählt)
+[1-3 gewählte Denkprinzipien die das Projekt prägen — mit Begründung. Auch bewusst ausgeschlossene Prinzipien notieren.]
 
 ### Validiert ✅
 [Was wissen wir sicher — mit Quelle/Beweis]
@@ -227,23 +227,30 @@ Idee testen bevor man sie baut.
 
 > Der Werkzeugkasten hilft Ideen zu **finden**. Die Denkprinzipien helfen Ideen zu **bewerten, schärfen und auszurichten**. Man kann ein Projekt bewusst auf 1-3 Leitprinzipien aufbauen und jede Entscheidung daran messen.
 
-### Leitprinzipien wählen
+### Leitprinzipien wählen (optional)
 
-Nicht alle Prinzipien passen zu jedem Projekt. Zu Beginn der Exploration (oder wenn sich eine Richtung herauskristallisiert) bewusst 1-3 Prinzipien als **Leitprinzipien** festlegen:
+Nicht alle Prinzipien passen zu jedem Projekt — und nicht jedes Projekt braucht explizite Leitprinzipien. Manche Prinzipien passen nicht zur Zielgruppe, manche fühlen sich falsch an, manche sind für den konkreten Fall irrelevant. Das ist okay.
+
+**Mögliche Wege:**
+
+1. **Bewusst wählen** — 1-3 Prinzipien als Leitprinzipien festlegen und das Projekt daran ausrichten
+2. **Explorativ nutzen** — In einer Session gemeinsam durchgehen: Welche Prinzipien kommen in Frage? Welche schliessen wir bewusst aus? Warum?
+3. **Als Impulsgeber** — Einzelne Prinzipien punktuell einsetzen wenn sie gerade passen, ohne sich festzulegen
+4. **Gar nicht** — Das Projekt braucht keine Leitprinzipien. Die Techniken aus dem Werkzeugkasten reichen.
+
+**Wenn Leitprinzipien gewählt werden:**
 
 ```markdown
 ## Leitprinzipien für [Projektname]
 
 1. [Prinzip] — Warum dieses Prinzip für unser Projekt zentral ist
 2. [Prinzip] — ...
-3. [Prinzip] — ...
 
-Jedes Feature, jede Entscheidung wird gegen diese Prinzipien geprüft:
-→ Passt das zu unseren Leitprinzipien?
-→ Verstärkt das unsere gewählte Richtung oder verwässert es sie?
+Bewusst ausgeschlossen:
+- [Prinzip] — Warum nicht (z.B. "Lock-in passt nicht zu unseren Werten")
 ```
 
-Die Leitprinzipien werden im Explorations-Log festgehalten und können sich ändern — aber bewusst, nicht schleichend.
+Die Leitprinzipien werden im Explorations-Log festgehalten und können sich ändern — aber bewusst, nicht schleichend. Auch bewusste Ausschlüsse sind eine wertvolle Erkenntnis.
 
 ### Katalog
 
