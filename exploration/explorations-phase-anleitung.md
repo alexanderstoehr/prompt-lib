@@ -89,6 +89,9 @@ Die Explorations-Phase bewegt sich zwischen drei Ebenen. Sie sind nicht streng s
 ### Kern-Idee
 [Ein Satz der das Projekt beschreibt]
 
+### Leitprinzipien
+[1-3 gewählte Denkprinzipien die das Projekt prägen — mit Begründung warum diese]
+
 ### Validiert ✅
 [Was wissen wir sicher — mit Quelle/Beweis]
 
@@ -220,6 +223,73 @@ Idee testen bevor man sie baut.
 
 ---
 
+## Denkprinzipien
+
+> Der Werkzeugkasten hilft Ideen zu **finden**. Die Denkprinzipien helfen Ideen zu **bewerten, schärfen und auszurichten**. Man kann ein Projekt bewusst auf 1-3 Leitprinzipien aufbauen und jede Entscheidung daran messen.
+
+### Leitprinzipien wählen
+
+Nicht alle Prinzipien passen zu jedem Projekt. Zu Beginn der Exploration (oder wenn sich eine Richtung herauskristallisiert) bewusst 1-3 Prinzipien als **Leitprinzipien** festlegen:
+
+```markdown
+## Leitprinzipien für [Projektname]
+
+1. [Prinzip] — Warum dieses Prinzip für unser Projekt zentral ist
+2. [Prinzip] — ...
+3. [Prinzip] — ...
+
+Jedes Feature, jede Entscheidung wird gegen diese Prinzipien geprüft:
+→ Passt das zu unseren Leitprinzipien?
+→ Verstärkt das unsere gewählte Richtung oder verwässert es sie?
+```
+
+Die Leitprinzipien werden im Explorations-Log festgehalten und können sich ändern — aber bewusst, nicht schleichend.
+
+### Katalog
+
+#### Verhaltens-Prinzipien
+
+| Prinzip | Kernidee | Frage an jedes Feature |
+|---------|----------|----------------------|
+| **Gamification** | Progression, Belohnung, Status, Levels | Macht das süchtig? Gibt es einen Fortschrittsbalken? |
+| **Loss Aversion** | Verlust wiegt schwerer als Gewinn | Zeigen wir was der User *verliert* wenn er nicht handelt? |
+| **Social Proof** | Menschen folgen anderen Menschen | Sehen User dass andere das auch tun/nutzen? |
+| **Endowment Effect** | Was man hat, gibt man ungern her | Geben wir erstmal viel, und nehmen dann weg (Upgrade-Anreiz)? |
+| **Variable Rewards** | Unvorhersagbare Belohnungen binden stärker als konstante | Gibt es Überraschungsmomente, nicht nur planbare? |
+| **Reciprocity** | Wer etwas bekommt, will etwas zurückgeben | Geben wir zuerst Wert bevor wir etwas verlangen? |
+
+#### Produkt-Prinzipien
+
+| Prinzip | Kernidee | Frage an jedes Feature |
+|---------|----------|----------------------|
+| **Progressive Disclosure** | Komplexität stückweise enthüllen | Sieht der Anfänger nur das Nötige? Kommt der Rest wenn er bereit ist? |
+| **Teaser-Prinzip** | Den Vorteil zeigen, nicht das Feature | Kommunizieren wir das Ergebnis oder die Mechanik? |
+| **Defaults Matter** | Die Voreinstellung gewinnt fast immer | Was ist unser Default — und ist er der richtige? |
+| **Friction Design** | Bewusst Reibung einbauen oder entfernen | Wo wollen wir es einfach machen (Signup) und wo bewusst schwer (Löschen)? |
+| **Network Effects** | Wird das Produkt besser je mehr es nutzen? | Profitiert User A davon dass User B auch da ist? |
+| **Ikea-Effekt** | Selbst Aufgebautes wird höher geschätzt | Kann der User etwas selbst gestalten/aufbauen? |
+
+#### Strategie-Prinzipien
+
+| Prinzip | Kernidee | Frage an jedes Feature |
+|---------|----------|----------------------|
+| **Pareto (80/20)** | 20% der Features liefern 80% des Werts | Gehört das zu den 20% oder zu den 80%? |
+| **Lock-in vs. Lock-out** | Wechsel erschweren (Retention) vs. Einstieg erschweren (Akquise) | Machen wir den Einstieg leicht und den Abschied schwer — oder umgekehrt? |
+| **Commoditization** | Ist das Feature in 2 Jahren Standard? | Differenziert uns das jetzt — oder bald nicht mehr? |
+| **First-Mover vs. Fast-Follower** | Erster sein oder besser sein? | Müssen wir das als Erste haben, oder reicht es besser zu sein? |
+
+### Einsatz der Prinzipien
+
+**Bei neuen Features:** "Prüfe dieses Feature gegen unsere Leitprinzipien" → Passt es, verstärkt es, widerspricht es?
+
+**Bei Entscheidungen:** "Welches Prinzip spricht für Option A, welches für Option B?" → Macht Trade-offs sichtbar.
+
+**Bei Reviews:** "Geh alle Prinzipien durch und sag mir wo wir Potenzial liegen lassen" → Systematisch blinde Flecken finden.
+
+**Wichtig:** Prinzipien können sich widersprechen (z.B. Friction Design vs. Progressive Disclosure). Das ist normal — die Leitprinzipien geben die Richtung vor, der Rest sind Impulse.
+
+---
+
 ## Notiz-System
 
 > Die Notizen sind nicht Beiwerk — sie sind der halbe Wert der Explorations-Phase. Ohne Notizen gehen Erkenntnisse verloren und die Rückkehr-Fähigkeit ist zerstört.
@@ -233,12 +303,16 @@ Chronologisches Protokoll aller Explorations-Sessions. **Alles wird festgehalten
 
 **Ebene:** Exploration / Validierung / Destillation
 **Genutzte Techniken:** [aus Werkzeugkasten]
+**Genutzte Prinzipien:** [aus Denkprinzipien, falls angewendet]
 
 **Denkweg:**
 [Wie sind wir auf die Ideen gekommen? Welche Frage hat wohin geführt?]
 
 **Ergebnisse:**
 [Ideen, Erkenntnisse, Fakten — alles]
+
+**Prinzipien-Check:**
+[Falls Leitprinzipien gewählt: Wie passen die heutigen Ergebnisse dazu?]
 
 **Sackgassen:**
 [Was haben wir verfolgt und verworfen — und warum?]
