@@ -59,6 +59,7 @@ Das Ergebnis: Man kann nach zwei Wochen Pause eine neue Session starten und der 
 ```
 exploration/  → Ideen finden, Möglichkeitsraum öffnen, validieren
 doku-phase/   → Spezifizieren, Architektur festlegen, Abhängigkeiten klären
+forms/        → Formulare & Wizards — Konzeption, UX, Tracking, Psychologie
 code-phase/   → (geplant)
 testing/      → (geplant)
 deployment/   → (geplant)
@@ -85,6 +86,12 @@ Für die Phase wenn Specs geschrieben werden. 6-Schichten-Schutzmodell:
 6. **Session-Log** — Lückenlose Nachvollziehbarkeit
 
 **[doku-phase/doku-phase-anleitung.md](doku-phase/doku-phase-anleitung.md)**
+
+### Formulare & Wizards
+
+Operatives Regelwerk für mehrstufige Formulare — von der Konzeption (Wizard-Typ, Rendering-Modus, Feldstrategie) über UX-Design, Mobile-Regeln und Psychologie-Prinzipien bis zu Tracking-Architektur und Post-Submit.
+
+**[forms/wizard-ruleset.md](forms/wizard-ruleset.md)**
 
 ### Phasenübergreifend
 

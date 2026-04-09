@@ -5,6 +5,9 @@
 # Lokale Notizen (Entstehungskontext, nicht öffentlich)
 notes/
 
+# Lokale Misc-Dateien
+misc/
+
 # Claude Code lokale Config
 .claude/
 

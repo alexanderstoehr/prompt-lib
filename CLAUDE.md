@@ -14,6 +14,7 @@ prompt-lib/
 ├── exploration/           ← Templates für die Explorations-/Discovery-Phase
 ├── doku-phase/            ← Templates für die Konzept-/Dokumentationsphase
 ├── code-phase/            ← Templates für die Implementierungsphase
+├── forms/                 ← Formulare & Wizards (phasenübergreifend)
 ├── testing/               ← Templates für Testing-Strategien
 ├── deployment/            ← Templates für Deployment & Infrastruktur
 ├── maintenance/           ← Templates für Wartung & Refactoring
