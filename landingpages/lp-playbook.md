@@ -614,8 +614,24 @@ Von stärkster zu schwächster Wirkung für Lead Gen:
 
 ## 9. Tracking & Analytics
 
-> **LP-Tracking ist Optimierungs-Infrastruktur — kein Add-on.**
-> Eine LP ohne vollständiges Tracking ist nicht optimierbar.
+> **LP-Tracking hat zwei gleichwertige Aufgaben — beide sind Pflicht:**
+>
+> **1. Conversion-Optimierung** — Was liefert die LP? Wo liegt Potenzial?
+> **2. Fehler-Debugging & Nachvollziehbarkeit** — Was ist schiefgelaufen? Für wen, wann, in welchem Zustand?
+>
+> Es gibt nichts Schlimmeres als einen Fehler zu bemerken ohne die Daten zu haben um zu verstehen wie, wo und wann er entstanden ist. Vollständige Nachvollziehbarkeit ist kein Nice-to-have — sie ist die Grundlage für einen reibungslosen Betrieb.
+
+### Nachvollziehbarkeits-Prinzip
+
+Jeder Besucher hinterlässt eine lückenlose Spur. Für jeden abgebrochenen, fehlgeschlagenen oder auffälligen Session muss folgende Frage beantwortbar sein:
+
+> **"Was hat dieser Besucher genau getan, in welcher Reihenfolge, und an welchem Punkt ist etwas schiefgelaufen?"**
+
+Das bedeutet:
+- Jede Nutzeraktion ist ein Event mit Zeitstempel und Kontext
+- Fehler werden immer mit dem Zustand der Seite/des Formulars zum Zeitpunkt des Fehlers geloggt
+- Client-seitige Fehler (JS-Exceptions) und server-seitige Fehler (API-Errors) werden gleichermassen erfasst
+- Die `visit_id` verknüpft alle Events eines Besuchs — auch über LP → Formular hinweg
 
 ### Grundprinzip: Server-First by Default
 
@@ -683,7 +699,7 @@ Beide Phasen sind über eine `visit_id` verknüpft die bei Seitenaufruf generier
 | `form_field_error` | field_name, error_type, attempt_n | Felder mit >15% Error-Rate müssen überarbeitet werden |
 | `form_submit_attempt` | fields_filled | Button geklickt — inkl. Validation-Fehler davor |
 | `form_submit_success` | — | Macro-Conversion — feuert nach erfolgreichem Submit, nie davor |
-| `form_submit_error` | error_type | Technische Fehler die direkte CR-Verluste verursachen |
+| `form_submit_error` | error_type, error_message, http_status, form_state (welche Felder ausgefüllt), timestamp | Technischer Fehler beim Submit — mit vollem Kontext damit der Fehler reproduzierbar ist |
 | `form_abandon` | last_active_field, fields_touched, time_in_form_ms | Abbruch nach form_start — welches Feld war zuletzt aktiv? |
 
 #### Multi-Step Form
@@ -691,6 +707,44 @@ Beide Phasen sind über eine `visit_id` verknüpft die bei Seitenaufruf generier
 → Wizard-Ruleset (`forms/wizard-ruleset.md`) Section 13
 
 Das Wizard-Ruleset enthält das vollständige Step-Level Tracking inkl. field_hesitation, step_back, autocomplete-Tracking und korrekter Abbruch-Erkennung per `current_step` statt letztem `field_focus`.
+
+---
+
+### Error-Tracking (Debugging & Nachvollziehbarkeit)
+
+Fehler werden immer mit dem Zustand der Seite zum Zeitpunkt des Fehlers geloggt. Nur so ist der Fehler reproduzierbar.
+
+#### Client-seitige Fehler
+
+| Event | Daten | Warum |
+|---|---|---|
+| `js_error` | error_message, stack_trace, component (wo im Code), url, visit_id, user_agent, timestamp | JS-Exception auf der LP — ohne Stack Trace ist der Fehler nicht findbar |
+| `api_error` | endpoint, http_status, error_message, request_payload (ohne sensitive Daten), visit_id, timestamp | API-Call fehlgeschlagen — mit Kontext was der User gerade getan hat |
+| `render_error` | component, error_message, visit_id | Rendering-Fehler (z.B. React Error Boundary) |
+
+**Pflicht-Regel:** Jeder ungefangene JS-Fehler (`window.onerror` / `window.addEventListener('unhandledrejection')`) wird als `js_error` geloggt. Kein Error darf lautlos verschwinden.
+
+#### Server-seitige Fehler
+
+Auf dem Backend: Jeder Fehler wird mit der `visit_id` aus dem Request geloggt. So ist jeder Server-Fehler einem konkreten Besuch zuordenbar.
+
+| Was geloggt wird | Warum |
+|---|---|
+| Endpoint + HTTP-Status + Error-Message | Was ist schiefgelaufen? |
+| visit_id aus dem Request-Header | Welchem Besuch gehört dieser Fehler? |
+| Timestamp | Wann? Häufung zu bestimmten Zeiten? |
+| Request-Payload (ohne Passwörter/sensitive Felder) | In welchem Zustand war das Formular? |
+| User-Agent + IP (gehasht) | Muster erkennen (Browser, Device) |
+
+#### Error-Muster die sofort eskaliert werden müssen
+
+| Muster | Signal | Massnahme |
+|---|---|---|
+| `form_submit_error` häuft sich in kurzer Zeit | Technisches Problem am Backend | Sofort prüfen — jeder Fehler = verlorener Lead |
+| `js_error` mit gleichem stack_trace bei mehreren Visits | Code-Bug der viele User betrifft | Hotfix |
+| `api_error` mit HTTP 500 wiederholt | Server-Problem | Infrastruktur prüfen |
+| `form_submit_error` nur auf bestimmtem Device/Browser | Browser-Kompatibilitätsproblem | Gezielt reproduzieren und fixen |
+| `render_error` bei bestimmter Section | Komponente bricht unter bestimmten Daten | Daten des auslösenden Visits prüfen |
 
 ---
 
@@ -793,6 +847,13 @@ Bei kleinen Traffic-Volumen führen Daten schnell zu falschen Schlüssen. Jede E
 → Ladezeit prüfen: performance Event → lcp_ms
 → Hero-Bild: irrelevant oder Stock-Foto?
 
+**Fehler-Muster (Debugging):**
+→ `form_submit_error` gehäuft → Backend-Problem, sofort prüfen, jeder Fehler = verlorener Lead
+→ `js_error` mit gleichem Stack Trace → Code-Bug der viele User betrifft, Hotfix
+→ `form_submit_error` nur auf Mobile → Browser/Device-Kompatibilitätsproblem
+→ `api_error` mit HTTP 500 → Server-Infrastruktur
+→ `form_field_error` Rate >15% auf einem Feld → Feld ist unklar oder technisch defekt
+
 ---
 
 ## 10. QA-Checkliste
@@ -849,6 +910,11 @@ Vor der Übergabe / vor dem Go-Live:
 - [ ] Google Ads Conversion Event implementiert (wenn Ads im Einsatz)?
 - [ ] Enhanced Conversions konfiguriert (user_data Format korrekt)?
 - [ ] Datenschutz: werden Tracking-Daten konform behandelt?
+- [ ] `js_error` via `window.onerror` + `unhandledrejection` gefangen und geloggt?
+- [ ] `api_error` mit visit_id, Status und Payload geloggt?
+- [ ] `form_submit_error` mit vollem Form-State geloggt (nicht nur error_type)?
+- [ ] Server-seitige Fehler mit visit_id verknüpft?
+- [ ] Error-Monitoring: gibt es eine Stelle wo Fehler-Häufungen sichtbar werden?
 
 ---
 
