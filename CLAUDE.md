@@ -15,6 +15,7 @@ prompt-lib/
 ├── doku-phase/            ← Templates für die Konzept-/Dokumentationsphase
 ├── code-phase/            ← Templates für die Implementierungsphase
 ├── forms/                 ← Formulare & Wizards (phasenübergreifend)
+├── landingpages/          ← Templates für Landing Pages & Lead-Generierung
 ├── testing/               ← Templates für Testing-Strategien
 ├── deployment/            ← Templates für Deployment & Infrastruktur
 ├── maintenance/           ← Templates für Wartung & Refactoring

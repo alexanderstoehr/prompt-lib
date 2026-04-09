@@ -57,13 +57,14 @@ Das Ergebnis: Man kann nach zwei Wochen Pause eine neue Session starten und der 
 ## Phasen
 
 ```
-exploration/  → Ideen finden, Möglichkeitsraum öffnen, validieren
-doku-phase/   → Spezifizieren, Architektur festlegen, Abhängigkeiten klären
-forms/        → Formulare & Wizards — Konzeption, UX, Tracking, Psychologie
-code-phase/   → (geplant)
-testing/      → (geplant)
-deployment/   → (geplant)
-maintenance/  → (geplant)
+exploration/    → Ideen finden, Möglichkeitsraum öffnen, validieren
+doku-phase/     → Spezifizieren, Architektur festlegen, Abhängigkeiten klären
+forms/          → Formulare & Wizards — Konzeption, UX, Tracking, Psychologie
+landingpages/   → Landing Pages & Lead-Generierung — Copy, Struktur, Tracking
+code-phase/     → (geplant)
+testing/        → (geplant)
+deployment/     → (geplant)
+maintenance/    → (geplant)
 ```
 
 ### Exploration
@@ -92,6 +93,14 @@ Für die Phase wenn Specs geschrieben werden. 6-Schichten-Schutzmodell:
 Operatives Regelwerk für mehrstufige Formulare — von der Konzeption (Wizard-Typ, Rendering-Modus, Feldstrategie) über UX-Design, Mobile-Regeln und Psychologie-Prinzipien bis zu Tracking-Architektur und Post-Submit.
 
 **[forms/wizard-ruleset.md](forms/wizard-ruleset.md)**
+
+### Landing Pages & Lead-Generierung
+
+Operatives Playbook für Lead-Gen Landing Pages mit bezahltem Traffic. Vollständiger Workflow von Briefing bis Tracking-Spec: Awareness-Level-Bestimmung, Struktur-Entscheidung (Standard/Vertrauensberufe), Copy-Regeln, Section Build Guide für alle 16 Sections, Formular-Strategie, Message Match, Social Proof und Zwei-Phasen-Tracking-Architektur.
+
+Evidenzbasiert — alle Kernaussagen mit Daten belegt (Unbounce, WordStream, CXL, Venture Harbour u.a.).
+
+**[landingpages/lp-playbook.md](landingpages/lp-playbook.md)**
 
 ### Phasenübergreifend
 
