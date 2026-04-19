@@ -1,0 +1,18 @@
+# .daugeIgnore
+# Schließt Dateien vom Dauge-Playbook-Index aus.
+# Nur Dateien mit YAML-Frontmatter (name, command, phase) sind Playbooks.
+
+# Repo-Meta
+README.md
+CLAUDE.md
+.gitignore
+.daugeIgnore
+
+# Starter-Anleitung (kein Playbook)
+bootstrap.md
+
+# Konventions-Docs (kein Playbook)
+shared/
+
+# Lokale Notes (nicht im Repo, sicherheitshalber trotzdem ausgeschlossen)
+notes/
