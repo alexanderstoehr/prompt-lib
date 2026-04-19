@@ -1,3 +1,12 @@
+---
+name: Dokumentations-Phase Anleitung
+command: doku-phase
+phase: doku-phase
+description: Regelwerk für die Konzept- und Dokumentationsphase vor der Implementierung.
+tags: [dokumentation, specs, architektur]
+inject: false
+---
+
 # Anleitung: Dokumentations-Phase
 
 > Regelwerk für die Konzept- und Dokumentationsphase eines Projekts.

@@ -1,3 +1,12 @@
+---
+name: Explorations-Phase Anleitung
+command: exploration
+phase: exploration
+description: Regelwerk für die offene Erkundungsphase vor der Spezifikation.
+tags: [exploration, ideation, research]
+inject: false
+---
+
 # Anleitung: Explorations-Phase
 
 > Regelwerk für die Phase vor der Spezifikation — wenn der Möglichkeitsraum noch offen ist.

@@ -1,3 +1,12 @@
+---
+name: Wizard Ruleset
+command: wizard-ruleset
+phase: forms
+description: Operatives Regelwerk für die Konzeption und Umsetzung von mehrstufigen Formularen.
+tags: [forms, wizard, ux]
+inject: false
+---
+
 # Wizard Ruleset
 **Operatives Regelwerk für die Konzeption und Umsetzung von mehrstufigen Formularen**
 

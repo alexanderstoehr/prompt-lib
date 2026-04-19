@@ -1,3 +1,12 @@
+---
+name: Landing Page Playbook
+command: lp-playbook
+phase: landingpages
+description: Operatives Regelwerk für Konzeption, Copy und Tracking von Lead-Generation Landingpages.
+tags: [landingpage, lead-gen, copy, tracking]
+inject: false
+---
+
 # Landing Page Playbook
 **Operatives Regelwerk für die Konzeption, Copy und Tracking von Lead-Generation Landingpages**
 
